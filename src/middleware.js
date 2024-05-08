@@ -7,9 +7,8 @@ export function middleware(request) {
     console.log(token)
     let publicPath =
         path === "/login" ||
-        path === "/register" ||
-        
-        path.includes("resetpassword");
+        path === "/register" 
+        // path.includes("resetpassword");
 
     let protectedPaths = path.startsWith("/profile");
 

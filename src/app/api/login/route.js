@@ -14,7 +14,7 @@ export async function POST(request) {
         let user = await User.findOne({ username });
         if (!user) {
             return NextResponse.json(
-                { error: "No user found" },
+                { error: "No user found", message:"Invalid username" },
                 { status: 404 }
             );
         }
