@@ -17,7 +17,7 @@ export async function POST(request) {
 
         if (!user) {
             return NextResponse.json(
-                { error: "Invalid token !!!" },
+                { error: "Invalid token !!!",message:"Invalid token !!!" },
                 { status: 400 }
             );
         }
@@ -39,6 +39,6 @@ export async function POST(request) {
             { status: 200 }
         );
     } catch (error) {
-        return NextResponse.json({ error: error.message }, { status: 400 });
+        return NextResponse.json({ error: error.message, message:error.message }, { status: 400 });
     }
 }

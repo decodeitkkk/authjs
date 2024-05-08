@@ -53,7 +53,7 @@ const page = () => {
                 toast.success(response?.data?.message);
                 router.push("/login");
             } else {
-                toast.error(response?.data?.message);
+                toast.error("Invalid Token. Please generate token again !!!");
             }
             // console.log(response.data.message);
         } catch (error) {
