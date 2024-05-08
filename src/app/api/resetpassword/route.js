@@ -13,7 +13,7 @@ export async function POST(request) {
             forgotPasswordTokenExpiry: { $gt: Date.now() },
         });
 
-        console.log(user);
+        // console.log(user);
 
         if (!user) {
             return NextResponse.json(
